@@ -1,7 +1,8 @@
 import random
 class Player:
-    def __init__ (self,pseudo,nse,msepc,fait,tablescore):
+    def __init__ (self,pseudo,nombre,nse,msepc,fait,tablescore):
         self.pseudo = pseudo
+        self.nombre = nombre
         self.nse = nse
         self.msepc = msepc
         self.fait = fait
@@ -11,6 +12,9 @@ class Player:
         name=input()
         self.pseudo = name
         return self.pseudo
+
+    def getnombre(self):
+        return self.nombre
 
     def getnse(self):
         self.nse = 0
@@ -56,7 +60,40 @@ class Player:
         print(self.fait)
         return self.fait
         
+class Karaoke:
+    def __init__ (self,nc,sn,np,mspc,mst,msi,msm):
+        self.nc = nc
+        self.sn = sn
+        self.np = np
+        self.mspc = mspc
+        self.mst = mst
+        self.msi = msi
+        self.msm = msm
+    
+    def getnc(self):
+       return self.nc
+    
+    def getsn(self):
+       return self.sn
+    
+    def getnp(self):
+       return self.np
+    
+    def getmspc(self):
+        return self.mspc
+    
+    def getmst(self):
+        return self.mst
+    
+    def getmsi(self):
+        return self.msi
+    
+    def getmsm(self):
+        return self.msm
+
+
 
 if __name__ == "__main__":
     allie = Player("allie",0,[0,0,0,0,0],0,[0,0,0,0,0])
+    kakoraoké = Karaoke(5,"lulu, lala, lele, nana, lolololo",2,0,0,0,0)
     
